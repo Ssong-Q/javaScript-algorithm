@@ -1,22 +1,16 @@
 function solution(arr) {
-  let answer = [],
-    sum = 0,
+  let answer,
     min = Number.MAX_SAFE_INTEGER;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2) {
-      sum += arr[i];
-      if (arr[i] < min) min = arr[i];
-    }
+    if (arr[i] < min) min = arr[i];
   }
-
-  answer.push(sum);
-  answer.push(min);
+  answer = min;
 
   return answer;
 }
 
-console.log(solution([12, 77, 38, 41, 53, 92, 85]));
+console.log(solution([5, 3, 7, 11, 2, 15, 17]));
 
 function teacherSolution(arr) {
   let answer,
